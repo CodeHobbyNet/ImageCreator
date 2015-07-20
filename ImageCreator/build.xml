@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ImageCreator" default="main">
+    <description>
+            description
+    </description>
+
+    <target name="main" depends="compile, compress" description="main">
+        <echo>
+        	Building the JAR file.
+    	</echo>
+    </target>
+
+    <target name="compile" description="Compiling">
+    	<javac srcdir="net/codehobby"/>
+    </target>
+
+	<target name="compress" description="Compress to JAR">
+		<jar jarfile="ImageCreator.jar" basedir="net.codehobby" includes="*.class" />
+	</target>
+</project>
